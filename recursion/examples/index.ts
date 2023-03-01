@@ -75,7 +75,16 @@ function facts(num: number): number {
     return num * facts(num - 1)
 } 
 
-// console.log('facts(4) :>> ', facts(4));
+// Factorial as loop 
+function factLoop (num: number) {
+    if (num < 2) return 1
+    for (let i = num - 1; i > 0; i--){
+        return num * factLoop(i)
+    }
+}
+
+// console.log('factLoop(5) :>> ', factLoop(21));
+// console.log('facts(4) :>> ', facts(20));
 
 function nestedArr(arr: number[]) : number {
     let sum = 0; 
